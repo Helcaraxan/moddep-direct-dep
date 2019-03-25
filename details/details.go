@@ -5,8 +5,10 @@ import (
 	printer "github.com/Helcaraxan/moddep-indirect-dep"
 )
 
-const data = "test-content"
+func PrintDefaultInfo() {
+	printer.Print(info.DefaultInfo())
+}
 
-func PrintDefault() {
-	printer.Print(&info.Info{Content: data})
+func PrintInfo(i *info.Info) {
+	printer.Print(i)
 }
